@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-black/80 lowercase antialiased selection:bg-gray-200">
+    <div class="max-w-2xl mx-auto px-6 py-24">
+        
+        <div class="mb-12">
+            <a href="index.html" class="text-black/60 hover:text-black transition-colors duration-300">← back</a>
+        </div>
+
+        <h1 class="text-black font-medium mb-12">timeline</h1>
+
+        <div class="space-y-6 text-black/60 leading-relaxed">
+            
+        <div class="flex flex-col sm:flex-row sm:gap-8 items-baseline">
+            <span class="text-sm text-black/40 dark:text-white/40 sm:w-24 shrink-0 sm:pt-1">04.21.26</span>
+            <span class="flex items-center">
+                <span id="typewriter"></span>
+                <span class="animate-pulse ml-[2px] w-[2px] h-4 bg-black dark:bg-white inline-block"></span>
+            </span>
+        </div>
+
+            <div class="flex flex-col sm:flex-row sm:gap-8">
+                <span class="text-sm text-black/40 sm:w-24 shrink-0 sm:pt-1">09.30.04</span>
+                <span>angel is born</span>
+            </div>
+
+        </div>
+
+        <div class="mt-24 pt-8 border-t border-gray-100 text-xs text-black/40">
+            © 2026 Angelos Chliapatoudis
+        </div>
+
+    </div>
+
+    <script>
+        const textToType = "More soon..";
+        const typewriterElement = document.getElementById("typewriter");
+        let index = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            // If typing and hasn't reached the end of the word
+            if (!isDeleting && index <= textToType.length) {
+                typewriterElement.textContent = textToType.substring(0, index);
+                index++;
+                setTimeout(typeEffect, 150); // Typing speed
+            } 
+            // If deleting and hasn't reached the beginning
+            else if (isDeleting && index >= 0) {
+                typewriterElement.textContent = textToType.substring(0, index);
+                index--;
+                setTimeout(typeEffect, 100); // Deleting speed
+            } 
+            // When the word is fully typed or fully deleted, switch states
+            else {
+                isDeleting =!isDeleting;
+                // Pause for 2 seconds before deleting, pause for 0.5s before typing again
+                setTimeout(typeEffect, isDeleting? 2000 : 500); 
+            }
+        }
+
+        // Start the animation loop
+        typeEffect();
+    </script>
+
+
+
+
+
+</body>
+</html>
