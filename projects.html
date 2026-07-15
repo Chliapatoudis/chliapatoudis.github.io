@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects</title>
+    <title>projects - angelos chliapatoudis</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-white text-black/80 lowercase antialiased selection:bg-gray-200">
+<body class="bg-white dark:bg-[#050505] text-black/80 dark:text-white/80 lowercase antialiased selection:bg-gray-200 dark:selection:bg-gray-800 transition-colors duration-300">
+    
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-[0.04] mix-blend-overlay" style="background-image: url('noise.svg');"></div>
+
     <div class="max-w-2xl mx-auto px-6 py-24">
         
-        <div class="mb-12">
-            <a href="index.html" class="text-black/60 hover:text-black transition-colors duration-300">← back</a>
+        <div class="mb-12 relative z-10">
+            <a href="index.html" class="text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors duration-300">← back</a>
         </div>
 
-        <h1 class="text-black font-medium mb-12">projects</h1>
+        <h1 class="text-black dark:text-white font-medium mb-12">projects</h1>
 
-        <div class="space-y-10 text-black/60 leading-relaxed">
+        <div class="space-y-10 text-black/60 dark:text-white/60 leading-relaxed">
             
             <div>
-                <a href="https://link-to-project.com" target="_blank" class="text-black font-medium hover:opacity-50 transition-opacity">project one ↗</a>
-                <p class="mt-2">a brief description of what this project does. built to 100k users in 6 months using just html and css.</p>
+                <span class="text-black dark:text-white font-medium">mnist neural network</span>
+                <p class="mt-2">developed a neural network from scratch using only numpy to categorize handwritten digits. achieved 98% accuracy.</p>
             </div>
 
             <div>
-                <a href="https://link-to-project2.com" target="_blank" class="text-black font-medium hover:opacity-50 transition-opacity">project two ↗</a>
-                <p class="mt-2">an open source tool for developers. featured on product hunt.</p>
+                <span class="text-black dark:text-white font-medium">data analysis pipeline</span>
+                <p class="mt-2">created a python-based system for small businesses to assess capital needs and track spending habits across projects.</p>
             </div>
 
-             <div class="mt-24 pt-8 border-t border-gray-100 text-xs text-black/40">
-                © 2026 Angelos Chliapatoudis
+            <div>
+                <span class="text-black dark:text-white font-medium">poker hand probability classifier</span>
+                <p class="mt-2">built a matlab notebook classification tool designed to be integrated into an algorithm for finding optimal playing strategies.</p>
+            </div>
+
+            <div>
+                <span class="text-black dark:text-white font-medium">red wine quality classifier</span>
+                <p class="mt-2">implemented a random forest algorithm acting as a decision tree to assign quality scores between 0 and 10.</p>
             </div>
 
         </div>
