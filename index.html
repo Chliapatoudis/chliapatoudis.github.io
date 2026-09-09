@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angelos Chliapatoudis — electrical & computer engineering student and machine learning engineer building computer vision pipelines and ai systems.">
     <title>Angelos Chliapatoudis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -10,50 +11,59 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-white text-black/80 lowercase antialiased selection:bg-gray-200">
+<body class="bg-white dark:bg-[#050505] text-black/80 dark:text-white/80 lowercase antialiased selection:bg-gray-200 dark:selection:bg-gray-800 transition-colors duration-300">
+
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-[0.04] mix-blend-overlay" style="background-image: url('noise.svg');"></div>
+
     <div class="max-w-2xl mx-auto px-6 py-24">
-        
+
         <div class="flex justify-between items-center mb-12">
-            <h1 class="text-black font-medium">Angelos Chliapatoudis</h1>
+            <h1 class="text-black dark:text-white font-medium">Angelos Chliapatoudis</h1>
             <a href="index.html" class="hover:opacity-50 transition-opacity duration-300">
                 <img src="logo.png" alt="your logo" class="h-6 w-auto dark:invert">
             </a>
         </div>
 
-
-
-
-        <div class="space-y-6 text-black/60 leading-relaxed">
-            <p>electrical & computer engineering student based in thessaloniki.</p>
-            <p>specializing in computer vision pipelines, ai models, and software development. currently cv team leader at avra auth.</p>
-            <p>general secretary at eestec lc thessaloniki and project leader for the eestech challenge.</p>        
+        <div class="space-y-6 text-black/60 dark:text-white/60 leading-relaxed">
+            <p>electrical & computer engineering student and machine learning engineer based in thessaloniki.</p>
+            <p>building computer vision pipelines and ai systems — currently developing ml/ai solutions at arx.net, leading the computer vision team at avra auth's autonomous marine systems project, and supporting hpc infrastructure at aristotle university.</p>
+            <p>co-founder of filon robotics (esa competition winner), general secretary at eestec lc thessaloniki, and project leader for the eestech challenge.</p>
         </div>
 
-        <div class="mt-12 flex flex-wrap gap-4 text-black font-medium">
-    	    <a href="https://www.linkedin.com/in/angelos-chliapatoudis-70a302343" class="hover:text-black/40 transition-colors duration-300">linkedin</a>
-    	    <a href="https://github.com/Chliapatoudis" class="hover:text-black/40 transition-colors duration-300">github</a>
-            <a href="projects.html" class="hover:text-black/40 transition-colors duration-300">projects</a>
-            <a href="notes.html" class="hover:text-black/40 transition-colors duration-300">notes</a>
-            <a href="timeline.html" class="hover:text-black/40 transition-colors duration-300">timeline</a>
+        <div class="mt-12 space-y-8 text-black/60 dark:text-white/60 leading-relaxed">
+
+            <div>
+                <h2 class="text-black dark:text-white font-medium mb-2">skills</h2>
+                <p>c, c++, python, matlab, typescript · computer vision & applied ml · nvidia-certified (computer vision for industrial inspection, transformer-based nlp applications, +7 more)</p>
+            </div>
+
+            <div>
+                <h2 class="text-black dark:text-white font-medium mb-2">education</h2>
+                <p>b.sc. electrical & computer engineering — aristotle university of thessaloniki, 2024–2029</p>
+            </div>
+
+            <div>
+                <h2 class="text-black dark:text-white font-medium mb-2">languages</h2>
+                <p>english (c2, university of michigan) · french (b2, delf – ministère de l'éducation nationale)</p>
+            </div>
+
         </div>
 
-        <div class="mt-24 pt-8 border-t border-gray-100 text-xs text-black/40">
+        <div class="mt-12 flex flex-wrap gap-4 text-black dark:text-white font-medium">
+    	    <a href="https://www.linkedin.com/in/angelos-chliapatoudis-70a302343" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">linkedin</a>
+    	    <a href="https://github.com/Chliapatoudis" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">github</a>
+            <a href="projects.html" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">projects</a>
+            <a href="notes.html" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">notes</a>
+            <a href="timeline.html" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">timeline</a>
+            <a href="resume.pdf" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">resume</a>
+            <a href="mailto:achliapatoudis@gmail.com" class="hover:text-black/40 dark:hover:text-white/40 transition-colors duration-300">contact</a>
+        </div>
+
+        <div class="mt-24 pt-8 border-t border-gray-100 dark:border-gray-900 text-xs text-black/40 dark:text-white/40">
             © 2026 Angelos Chliapatoudis
         </div>
 
     </div>
-    
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
-        themeToggleBtn.addEventListener('click', function() {
-            htmlElement.classList.toggle('dark');
-            if (htmlElement.classList.contains('dark')) {
-                themeToggleBtn.innerHTML = '&#9680;';
-            } else {
-                themeToggleBtn.innerHTML = '&#9681;';
-            }
-        });
-    </script>
+
 </body>
 </html>
